@@ -1,0 +1,27 @@
+#BSUB -P BIF121
+#BSUB -W 2:00
+#BSUB -nnodes 3
+#BSUB -q debug
+#BSUB -J vclassCT18
+#BSUB -o /ccs/home/jreynolds/21summer/veress/classification/code/ct_scripts/ct_logout_%J.out
+#BSUB -e /ccs/home/jreynolds/21summer/veress/classification/code/ct_scripts/ct_logerr_%J.err
+
+module load open-ce
+
+#S1
+jsrun -n1 -c10 -g1 -a1 -bpacked:10 python3 /ccs/home/jreynolds/21summer/veress/classification/code/ct_scripts/c_CT_veress.py 1 &
+#S2
+jsrun -n1 -c10 -g1 -a1 -bpacked:10 python3 /ccs/home/jreynolds/21summer/veress/classification/code/ct_scripts/c_CT_veress.py 2 &
+#S3
+jsrun -n1 -c10 -g1 -a1 -bpacked:10 python3 /ccs/home/jreynolds/21summer/veress/classification/code/ct_scripts/c_CT_veress.py 3 &
+#S4
+jsrun -n1 -c10 -g1 -a1 -bpacked:10 python3 /ccs/home/jreynolds/21summer/veress/classification/code/ct_scripts/c_CT_veress.py 4 &
+#S5
+jsrun -n1 -c10 -g1 -a1 -bpacked:10 python3 /ccs/home/jreynolds/21summer/veress/classification/code/ct_scripts/c_CT_veress.py 5 &
+#S6
+jsrun -n1 -c10 -g1 -a1 -bpacked:10 python3 /ccs/home/jreynolds/21summer/veress/classification/code/ct_scripts/c_CT_veress.py 6 &
+#S7
+jsrun -n1 -c10 -g1 -a1 -bpacked:10 python3 /ccs/home/jreynolds/21summer/veress/classification/code/ct_scripts/c_CT_veress.py 7 &
+#S8
+jsrun -n1 -c10 -g1 -a1 -bpacked:10 python3 /ccs/home/jreynolds/21summer/veress/classification/code/ct_scripts/c_CT_veress.py 8 &
+

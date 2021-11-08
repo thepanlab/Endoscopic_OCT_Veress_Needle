@@ -1,0 +1,262 @@
+#BSUB -P BIF121
+#BSUB -W 2:00
+#BSUB -nnodes 28
+#BSUB -q debug
+#BSUB -J vclassCV18
+#BSUB -o /ccs/home/jreynolds/21summer/veress/classification/code/v20210811/logout_CV18_%J.out
+#BSUB -e /ccs/home/jreynolds/21summer/veress/classification/code/v20210811/logerr_CV18_%J.err
+
+module load open-ce
+
+# Testing-fold 1
+# S1, ResNet50
+#jsrun -n1 -c7 -g1 -a1 -bpacked:7 python3 /ccs/home/jreynolds/21summer/veress/classification/code/v20210811/c_NCV_veress.py 1 1 0 &
+jsrun -n1 -c7 -g1 -a1 -bpacked:7 python3 /ccs/home/jreynolds/21summer/veress/classification/code/v20210811/c_NCV_veress.py 1 2 0 &
+jsrun -n1 -c7 -g1 -a1 -bpacked:7 python3 /ccs/home/jreynolds/21summer/veress/classification/code/v20210811/c_NCV_veress.py 1 3 0 &
+jsrun -n1 -c7 -g1 -a1 -bpacked:7 python3 /ccs/home/jreynolds/21summer/veress/classification/code/v20210811/c_NCV_veress.py 1 4 0 &
+jsrun -n1 -c7 -g1 -a1 -bpacked:7 python3 /ccs/home/jreynolds/21summer/veress/classification/code/v20210811/c_NCV_veress.py 1 5 0 &
+jsrun -n1 -c7 -g1 -a1 -bpacked:7 python3 /ccs/home/jreynolds/21summer/veress/classification/code/v20210811/c_NCV_veress.py 1 6 0 &
+jsrun -n1 -c7 -g1 -a1 -bpacked:7 python3 /ccs/home/jreynolds/21summer/veress/classification/code/v20210811/c_NCV_veress.py 1 7 0 &
+jsrun -n1 -c7 -g1 -a1 -bpacked:7 python3 /ccs/home/jreynolds/21summer/veress/classification/code/v20210811/c_NCV_veress.py 1 8 0 &
+
+# S1, InceptionV3
+#jsrun -n1 -c7 -g1 -a1 -bpacked:7 python3 /ccs/home/jreynolds/21summer/veress/classification/code/v20210811/c_NCV_veress.py 1 1 1 &
+jsrun -n1 -c7 -g1 -a1 -bpacked:7 python3 /ccs/home/jreynolds/21summer/veress/classification/code/v20210811/c_NCV_veress.py 1 2 1 &
+jsrun -n1 -c7 -g1 -a1 -bpacked:7 python3 /ccs/home/jreynolds/21summer/veress/classification/code/v20210811/c_NCV_veress.py 1 3 1 &
+jsrun -n1 -c7 -g1 -a1 -bpacked:7 python3 /ccs/home/jreynolds/21summer/veress/classification/code/v20210811/c_NCV_veress.py 1 4 1 &
+jsrun -n1 -c7 -g1 -a1 -bpacked:7 python3 /ccs/home/jreynolds/21summer/veress/classification/code/v20210811/c_NCV_veress.py 1 5 1 &
+jsrun -n1 -c7 -g1 -a1 -bpacked:7 python3 /ccs/home/jreynolds/21summer/veress/classification/code/v20210811/c_NCV_veress.py 1 6 1 &
+jsrun -n1 -c7 -g1 -a1 -bpacked:7 python3 /ccs/home/jreynolds/21summer/veress/classification/code/v20210811/c_NCV_veress.py 1 7 1 &
+jsrun -n1 -c7 -g1 -a1 -bpacked:7 python3 /ccs/home/jreynolds/21summer/veress/classification/code/v20210811/c_NCV_veress.py 1 8 1 &
+
+# S2, Xception
+#jsrun -n1 -c7 -g1 -a1 -bpacked:7 python3 /ccs/home/jreynolds/21summer/veress/classification/code/v20210811/c_NCV_veress.py 1 1 2 &
+jsrun -n1 -c7 -g1 -a1 -bpacked:7 python3 /ccs/home/jreynolds/21summer/veress/classification/code/v20210811/c_NCV_veress.py 1 2 2 &
+jsrun -n1 -c7 -g1 -a1 -bpacked:7 python3 /ccs/home/jreynolds/21summer/veress/classification/code/v20210811/c_NCV_veress.py 1 3 2 &
+jsrun -n1 -c7 -g1 -a1 -bpacked:7 python3 /ccs/home/jreynolds/21summer/veress/classification/code/v20210811/c_NCV_veress.py 1 4 2 &
+jsrun -n1 -c7 -g1 -a1 -bpacked:7 python3 /ccs/home/jreynolds/21summer/veress/classification/code/v20210811/c_NCV_veress.py 1 5 2 &
+jsrun -n1 -c7 -g1 -a1 -bpacked:7 python3 /ccs/home/jreynolds/21summer/veress/classification/code/v20210811/c_NCV_veress.py 1 6 2 &
+jsrun -n1 -c7 -g1 -a1 -bpacked:7 python3 /ccs/home/jreynolds/21summer/veress/classification/code/v20210811/c_NCV_veress.py 1 7 2 &
+jsrun -n1 -c7 -g1 -a1 -bpacked:7 python3 /ccs/home/jreynolds/21summer/veress/classification/code/v20210811/c_NCV_veress.py 1 8 2 &
+
+# Testing-fold 2
+# S2, ResNet50 
+jsrun -n1 -c7 -g1 -a1 -bpacked:7 python3 /ccs/home/jreynolds/21summer/veress/classification/code/v20210811/c_NCV_veress.py 2 1 0 &
+#jsrun -n1 -c7 -g1 -a1 -bpacked:7 python3 /ccs/home/jreynolds/21summer/veress/classification/code/v20210811/c_NCV_veress.py 2 2 0 &
+jsrun -n1 -c7 -g1 -a1 -bpacked:7 python3 /ccs/home/jreynolds/21summer/veress/classification/code/v20210811/c_NCV_veress.py 2 3 0 &
+jsrun -n1 -c7 -g1 -a1 -bpacked:7 python3 /ccs/home/jreynolds/21summer/veress/classification/code/v20210811/c_NCV_veress.py 2 4 0 &
+jsrun -n1 -c7 -g1 -a1 -bpacked:7 python3 /ccs/home/jreynolds/21summer/veress/classification/code/v20210811/c_NCV_veress.py 2 5 0 &
+jsrun -n1 -c7 -g1 -a1 -bpacked:7 python3 /ccs/home/jreynolds/21summer/veress/classification/code/v20210811/c_NCV_veress.py 2 6 0 &
+jsrun -n1 -c7 -g1 -a1 -bpacked:7 python3 /ccs/home/jreynolds/21summer/veress/classification/code/v20210811/c_NCV_veress.py 2 7 0 &
+jsrun -n1 -c7 -g1 -a1 -bpacked:7 python3 /ccs/home/jreynolds/21summer/veress/classification/code/v20210811/c_NCV_veress.py 2 8 0 &
+
+# S2, InceptionV3
+jsrun -n1 -c7 -g1 -a1 -bpacked:7 python3 /ccs/home/jreynolds/21summer/veress/classification/code/v20210811/c_NCV_veress.py 2 1 1 &
+#jsrun -n1 -c7 -g1 -a1 -bpacked:7 python3 /ccs/home/jreynolds/21summer/veress/classification/code/v20210811/c_NCV_veress.py 2 2 1 &
+jsrun -n1 -c7 -g1 -a1 -bpacked:7 python3 /ccs/home/jreynolds/21summer/veress/classification/code/v20210811/c_NCV_veress.py 2 3 1 &
+jsrun -n1 -c7 -g1 -a1 -bpacked:7 python3 /ccs/home/jreynolds/21summer/veress/classification/code/v20210811/c_NCV_veress.py 2 4 1 &
+jsrun -n1 -c7 -g1 -a1 -bpacked:7 python3 /ccs/home/jreynolds/21summer/veress/classification/code/v20210811/c_NCV_veress.py 2 5 1 &
+jsrun -n1 -c7 -g1 -a1 -bpacked:7 python3 /ccs/home/jreynolds/21summer/veress/classification/code/v20210811/c_NCV_veress.py 2 6 1 &
+jsrun -n1 -c7 -g1 -a1 -bpacked:7 python3 /ccs/home/jreynolds/21summer/veress/classification/code/v20210811/c_NCV_veress.py 2 7 1 &
+jsrun -n1 -c7 -g1 -a1 -bpacked:7 python3 /ccs/home/jreynolds/21summer/veress/classification/code/v20210811/c_NCV_veress.py 2 8 1 &
+
+# S2, Xception
+jsrun -n1 -c7 -g1 -a1 -bpacked:7 python3 /ccs/home/jreynolds/21summer/veress/classification/code/v20210811/c_NCV_veress.py 2 1 2 &
+#jsrun -n1 -c7 -g1 -a1 -bpacked:7 python3 /ccs/home/jreynolds/21summer/veress/classification/code/v20210811/c_NCV_veress.py 2 2 2 &
+jsrun -n1 -c7 -g1 -a1 -bpacked:7 python3 /ccs/home/jreynolds/21summer/veress/classification/code/v20210811/c_NCV_veress.py 2 3 2 &
+jsrun -n1 -c7 -g1 -a1 -bpacked:7 python3 /ccs/home/jreynolds/21summer/veress/classification/code/v20210811/c_NCV_veress.py 2 4 2 &
+jsrun -n1 -c7 -g1 -a1 -bpacked:7 python3 /ccs/home/jreynolds/21summer/veress/classification/code/v20210811/c_NCV_veress.py 2 5 2 &
+jsrun -n1 -c7 -g1 -a1 -bpacked:7 python3 /ccs/home/jreynolds/21summer/veress/classification/code/v20210811/c_NCV_veress.py 2 6 2 &
+jsrun -n1 -c7 -g1 -a1 -bpacked:7 python3 /ccs/home/jreynolds/21summer/veress/classification/code/v20210811/c_NCV_veress.py 2 7 2 &
+jsrun -n1 -c7 -g1 -a1 -bpacked:7 python3 /ccs/home/jreynolds/21summer/veress/classification/code/v20210811/c_NCV_veress.py 2 8 2 &
+
+# Testing-fold 3
+# S3, ResNet50 
+jsrun -n1 -c7 -g1 -a1 -bpacked:7 python3 /ccs/home/jreynolds/21summer/veress/classification/code/v20210811/c_NCV_veress.py 3 1 0 &
+jsrun -n1 -c7 -g1 -a1 -bpacked:7 python3 /ccs/home/jreynolds/21summer/veress/classification/code/v20210811/c_NCV_veress.py 3 2 0 &
+#jsrun -n1 -c7 -g1 -a1 -bpacked:7 python3 /ccs/home/jreynolds/21summer/veress/classification/code/v20210811/c_NCV_veress.py 3 3 0 &
+jsrun -n1 -c7 -g1 -a1 -bpacked:7 python3 /ccs/home/jreynolds/21summer/veress/classification/code/v20210811/c_NCV_veress.py 3 4 0 &
+jsrun -n1 -c7 -g1 -a1 -bpacked:7 python3 /ccs/home/jreynolds/21summer/veress/classification/code/v20210811/c_NCV_veress.py 3 5 0 &
+jsrun -n1 -c7 -g1 -a1 -bpacked:7 python3 /ccs/home/jreynolds/21summer/veress/classification/code/v20210811/c_NCV_veress.py 3 6 0 &
+jsrun -n1 -c7 -g1 -a1 -bpacked:7 python3 /ccs/home/jreynolds/21summer/veress/classification/code/v20210811/c_NCV_veress.py 3 7 0 &
+jsrun -n1 -c7 -g1 -a1 -bpacked:7 python3 /ccs/home/jreynolds/21summer/veress/classification/code/v20210811/c_NCV_veress.py 3 8 0 &
+
+# S3, InceptionV3
+jsrun -n1 -c7 -g1 -a1 -bpacked:7 python3 /ccs/home/jreynolds/21summer/veress/classification/code/v20210811/c_NCV_veress.py 3 1 1 &
+jsrun -n1 -c7 -g1 -a1 -bpacked:7 python3 /ccs/home/jreynolds/21summer/veress/classification/code/v20210811/c_NCV_veress.py 3 2 1 &
+#jsrun -n1 -c7 -g1 -a1 -bpacked:7 python3 /ccs/home/jreynolds/21summer/veress/classification/code/v20210811/c_NCV_veress.py 3 3 1 &
+jsrun -n1 -c7 -g1 -a1 -bpacked:7 python3 /ccs/home/jreynolds/21summer/veress/classification/code/v20210811/c_NCV_veress.py 3 4 1 &
+jsrun -n1 -c7 -g1 -a1 -bpacked:7 python3 /ccs/home/jreynolds/21summer/veress/classification/code/v20210811/c_NCV_veress.py 3 5 1 &
+jsrun -n1 -c7 -g1 -a1 -bpacked:7 python3 /ccs/home/jreynolds/21summer/veress/classification/code/v20210811/c_NCV_veress.py 3 6 1 &
+jsrun -n1 -c7 -g1 -a1 -bpacked:7 python3 /ccs/home/jreynolds/21summer/veress/classification/code/v20210811/c_NCV_veress.py 3 7 1 &
+jsrun -n1 -c7 -g1 -a1 -bpacked:7 python3 /ccs/home/jreynolds/21summer/veress/classification/code/v20210811/c_NCV_veress.py 3 8 1 &
+
+# S3, Xception
+jsrun -n1 -c7 -g1 -a1 -bpacked:7 python3 /ccs/home/jreynolds/21summer/veress/classification/code/v20210811/c_NCV_veress.py 3 1 2 &
+jsrun -n1 -c7 -g1 -a1 -bpacked:7 python3 /ccs/home/jreynolds/21summer/veress/classification/code/v20210811/c_NCV_veress.py 3 2 2 &
+#jsrun -n1 -c7 -g1 -a1 -bpacked:7 python3 /ccs/home/jreynolds/21summer/veress/classification/code/v20210811/c_NCV_veress.py 3 3 2 &
+jsrun -n1 -c7 -g1 -a1 -bpacked:7 python3 /ccs/home/jreynolds/21summer/veress/classification/code/v20210811/c_NCV_veress.py 3 4 2 &
+jsrun -n1 -c7 -g1 -a1 -bpacked:7 python3 /ccs/home/jreynolds/21summer/veress/classification/code/v20210811/c_NCV_veress.py 3 5 2 &
+jsrun -n1 -c7 -g1 -a1 -bpacked:7 python3 /ccs/home/jreynolds/21summer/veress/classification/code/v20210811/c_NCV_veress.py 3 6 2 &
+jsrun -n1 -c7 -g1 -a1 -bpacked:7 python3 /ccs/home/jreynolds/21summer/veress/classification/code/v20210811/c_NCV_veress.py 3 7 2 &
+jsrun -n1 -c7 -g1 -a1 -bpacked:7 python3 /ccs/home/jreynolds/21summer/veress/classification/code/v20210811/c_NCV_veress.py 3 8 2 &
+
+
+# Testing-fold 4
+
+# S4, ResNet50 
+jsrun -n1 -c7 -g1 -a1 -bpacked:7 python3 /ccs/home/jreynolds/21summer/veress/classification/code/v20210811/c_NCV_veress.py 4 1 0 &
+jsrun -n1 -c7 -g1 -a1 -bpacked:7 python3 /ccs/home/jreynolds/21summer/veress/classification/code/v20210811/c_NCV_veress.py 4 2 0 &
+jsrun -n1 -c7 -g1 -a1 -bpacked:7 python3 /ccs/home/jreynolds/21summer/veress/classification/code/v20210811/c_NCV_veress.py 4 3 0 &
+#jsrun -n1 -c7 -g1 -a1 -bpacked:7 python3 /ccs/home/jreynolds/21summer/veress/classification/code/v20210811/c_NCV_veress.py 4 4 0 &
+jsrun -n1 -c7 -g1 -a1 -bpacked:7 python3 /ccs/home/jreynolds/21summer/veress/classification/code/v20210811/c_NCV_veress.py 4 5 0 &
+jsrun -n1 -c7 -g1 -a1 -bpacked:7 python3 /ccs/home/jreynolds/21summer/veress/classification/code/v20210811/c_NCV_veress.py 4 6 0 &
+jsrun -n1 -c7 -g1 -a1 -bpacked:7 python3 /ccs/home/jreynolds/21summer/veress/classification/code/v20210811/c_NCV_veress.py 4 7 0 &
+jsrun -n1 -c7 -g1 -a1 -bpacked:7 python3 /ccs/home/jreynolds/21summer/veress/classification/code/v20210811/c_NCV_veress.py 4 8 0 &
+
+# S4, InceptionV3
+jsrun -n1 -c7 -g1 -a1 -bpacked:7 python3 /ccs/home/jreynolds/21summer/veress/classification/code/v20210811/c_NCV_veress.py 4 1 1 &
+jsrun -n1 -c7 -g1 -a1 -bpacked:7 python3 /ccs/home/jreynolds/21summer/veress/classification/code/v20210811/c_NCV_veress.py 4 2 1 &
+jsrun -n1 -c7 -g1 -a1 -bpacked:7 python3 /ccs/home/jreynolds/21summer/veress/classification/code/v20210811/c_NCV_veress.py 4 3 1 &
+#jsrun -n1 -c7 -g1 -a1 -bpacked:7 python3 /ccs/home/jreynolds/21summer/veress/classification/code/v20210811/c_NCV_veress.py 4 4 1 &
+jsrun -n1 -c7 -g1 -a1 -bpacked:7 python3 /ccs/home/jreynolds/21summer/veress/classification/code/v20210811/c_NCV_veress.py 4 5 1 &
+jsrun -n1 -c7 -g1 -a1 -bpacked:7 python3 /ccs/home/jreynolds/21summer/veress/classification/code/v20210811/c_NCV_veress.py 4 6 1 &
+jsrun -n1 -c7 -g1 -a1 -bpacked:7 python3 /ccs/home/jreynolds/21summer/veress/classification/code/v20210811/c_NCV_veress.py 4 7 1 &
+jsrun -n1 -c7 -g1 -a1 -bpacked:7 python3 /ccs/home/jreynolds/21summer/veress/classification/code/v20210811/c_NCV_veress.py 4 8 1 &
+
+# S4, Xception
+jsrun -n1 -c7 -g1 -a1 -bpacked:7 python3 /ccs/home/jreynolds/21summer/veress/classification/code/v20210811/c_NCV_veress.py 4 1 2 &
+jsrun -n1 -c7 -g1 -a1 -bpacked:7 python3 /ccs/home/jreynolds/21summer/veress/classification/code/v20210811/c_NCV_veress.py 4 2 2 &
+jsrun -n1 -c7 -g1 -a1 -bpacked:7 python3 /ccs/home/jreynolds/21summer/veress/classification/code/v20210811/c_NCV_veress.py 4 3 2 &
+#jsrun -n1 -c7 -g1 -a1 -bpacked:7 python3 /ccs/home/jreynolds/21summer/veress/classification/code/v20210811/c_NCV_veress.py 4 4 2 &
+jsrun -n1 -c7 -g1 -a1 -bpacked:7 python3 /ccs/home/jreynolds/21summer/veress/classification/code/v20210811/c_NCV_veress.py 4 5 2 &
+jsrun -n1 -c7 -g1 -a1 -bpacked:7 python3 /ccs/home/jreynolds/21summer/veress/classification/code/v20210811/c_NCV_veress.py 4 6 2 &
+jsrun -n1 -c7 -g1 -a1 -bpacked:7 python3 /ccs/home/jreynolds/21summer/veress/classification/code/v20210811/c_NCV_veress.py 4 7 2 &
+jsrun -n1 -c7 -g1 -a1 -bpacked:7 python3 /ccs/home/jreynolds/21summer/veress/classification/code/v20210811/c_NCV_veress.py 4 8 2 &
+
+# Testing-fold 5
+
+# S5, ResNet50
+jsrun -n1 -c7 -g1 -a1 -bpacked:7 python3 /ccs/home/jreynolds/21summer/veress/classification/code/v20210811/c_NCV_veress.py 5 1 0 &
+jsrun -n1 -c7 -g1 -a1 -bpacked:7 python3 /ccs/home/jreynolds/21summer/veress/classification/code/v20210811/c_NCV_veress.py 5 2 0 &
+jsrun -n1 -c7 -g1 -a1 -bpacked:7 python3 /ccs/home/jreynolds/21summer/veress/classification/code/v20210811/c_NCV_veress.py 5 3 0 &
+jsrun -n1 -c7 -g1 -a1 -bpacked:7 python3 /ccs/home/jreynolds/21summer/veress/classification/code/v20210811/c_NCV_veress.py 5 4 0 &
+#jsrun -n1 -c7 -g1 -a1 -bpacked:7 python3 /ccs/home/jreynolds/21summer/veress/classification/code/v20210811/c_NCV_veress.py 5 5 0 &
+jsrun -n1 -c7 -g1 -a1 -bpacked:7 python3 /ccs/home/jreynolds/21summer/veress/classification/code/v20210811/c_NCV_veress.py 5 6 0 &
+jsrun -n1 -c7 -g1 -a1 -bpacked:7 python3 /ccs/home/jreynolds/21summer/veress/classification/code/v20210811/c_NCV_veress.py 5 7 0 &
+jsrun -n1 -c7 -g1 -a1 -bpacked:7 python3 /ccs/home/jreynolds/21summer/veress/classification/code/v20210811/c_NCV_veress.py 5 8 0 &
+
+## S5, InceptionV3
+jsrun -n1 -c7 -g1 -a1 -bpacked:7 python3 /ccs/home/jreynolds/21summer/veress/classification/code/v20210811/c_NCV_veress.py 5 1 1 &
+jsrun -n1 -c7 -g1 -a1 -bpacked:7 python3 /ccs/home/jreynolds/21summer/veress/classification/code/v20210811/c_NCV_veress.py 5 2 1 &
+jsrun -n1 -c7 -g1 -a1 -bpacked:7 python3 /ccs/home/jreynolds/21summer/veress/classification/code/v20210811/c_NCV_veress.py 5 3 1 &
+jsrun -n1 -c7 -g1 -a1 -bpacked:7 python3 /ccs/home/jreynolds/21summer/veress/classification/code/v20210811/c_NCV_veress.py 5 4 1 &
+#jsrun -n1 -c7 -g1 -a1 -bpacked:7 python3 /ccs/home/jreynolds/21summer/veress/classification/code/v20210811/c_NCV_veress.py 5 5 1 &
+jsrun -n1 -c7 -g1 -a1 -bpacked:7 python3 /ccs/home/jreynolds/21summer/veress/classification/code/v20210811/c_NCV_veress.py 5 6 1 &
+jsrun -n1 -c7 -g1 -a1 -bpacked:7 python3 /ccs/home/jreynolds/21summer/veress/classification/code/v20210811/c_NCV_veress.py 5 7 1 &
+jsrun -n1 -c7 -g1 -a1 -bpacked:7 python3 /ccs/home/jreynolds/21summer/veress/classification/code/v20210811/c_NCV_veress.py 5 8 1 &
+
+# S5, Xception
+jsrun -n1 -c7 -g1 -a1 -bpacked:7 python3 /ccs/home/jreynolds/21summer/veress/classification/code/v20210811/c_NCV_veress.py 5 1 2 &
+jsrun -n1 -c7 -g1 -a1 -bpacked:7 python3 /ccs/home/jreynolds/21summer/veress/classification/code/v20210811/c_NCV_veress.py 5 2 2 &
+jsrun -n1 -c7 -g1 -a1 -bpacked:7 python3 /ccs/home/jreynolds/21summer/veress/classification/code/v20210811/c_NCV_veress.py 5 3 2 &
+jsrun -n1 -c7 -g1 -a1 -bpacked:7 python3 /ccs/home/jreynolds/21summer/veress/classification/code/v20210811/c_NCV_veress.py 5 4 2 &
+#jsrun -n1 -c7 -g1 -a1 -bpacked:7 python3 /ccs/home/jreynolds/21summer/veress/classification/code/v20210811/c_NCV_veress.py 5 5 2 &
+jsrun -n1 -c7 -g1 -a1 -bpacked:7 python3 /ccs/home/jreynolds/21summer/veress/classification/code/v20210811/c_NCV_veress.py 5 6 2 &
+jsrun -n1 -c7 -g1 -a1 -bpacked:7 python3 /ccs/home/jreynolds/21summer/veress/classification/code/v20210811/c_NCV_veress.py 5 7 2 &
+jsrun -n1 -c7 -g1 -a1 -bpacked:7 python3 /ccs/home/jreynolds/21summer/veress/classification/code/v20210811/c_NCV_veress.py 5 8 2 &
+
+# Testing-fold 6
+# S6, ResNet50 
+jsrun -n1 -c7 -g1 -a1 -bpacked:7 python3 /ccs/home/jreynolds/21summer/veress/classification/code/v20210811/c_NCV_veress.py 6 1 0 &
+jsrun -n1 -c7 -g1 -a1 -bpacked:7 python3 /ccs/home/jreynolds/21summer/veress/classification/code/v20210811/c_NCV_veress.py 6 2 0 &
+jsrun -n1 -c7 -g1 -a1 -bpacked:7 python3 /ccs/home/jreynolds/21summer/veress/classification/code/v20210811/c_NCV_veress.py 6 3 0 &
+jsrun -n1 -c7 -g1 -a1 -bpacked:7 python3 /ccs/home/jreynolds/21summer/veress/classification/code/v20210811/c_NCV_veress.py 6 4 0 &
+jsrun -n1 -c7 -g1 -a1 -bpacked:7 python3 /ccs/home/jreynolds/21summer/veress/classification/code/v20210811/c_NCV_veress.py 6 5 0 &
+#jsrun -n1 -c7 -g1 -a1 -bpacked:7 python3 /ccs/home/jreynolds/21summer/veress/classification/code/v20210811/c_NCV_veress.py 6 6 0 &
+jsrun -n1 -c7 -g1 -a1 -bpacked:7 python3 /ccs/home/jreynolds/21summer/veress/classification/code/v20210811/c_NCV_veress.py 6 7 0 &
+jsrun -n1 -c7 -g1 -a1 -bpacked:7 python3 /ccs/home/jreynolds/21summer/veress/classification/code/v20210811/c_NCV_veress.py 6 8 0 &
+
+# S6, InceptionV3
+jsrun -n1 -c7 -g1 -a1 -bpacked:7 python3 /ccs/home/jreynolds/21summer/veress/classification/code/v20210811/c_NCV_veress.py 6 1 1 &
+jsrun -n1 -c7 -g1 -a1 -bpacked:7 python3 /ccs/home/jreynolds/21summer/veress/classification/code/v20210811/c_NCV_veress.py 6 2 1 &
+jsrun -n1 -c7 -g1 -a1 -bpacked:7 python3 /ccs/home/jreynolds/21summer/veress/classification/code/v20210811/c_NCV_veress.py 6 3 1 &
+jsrun -n1 -c7 -g1 -a1 -bpacked:7 python3 /ccs/home/jreynolds/21summer/veress/classification/code/v20210811/c_NCV_veress.py 6 4 1 &
+jsrun -n1 -c7 -g1 -a1 -bpacked:7 python3 /ccs/home/jreynolds/21summer/veress/classification/code/v20210811/c_NCV_veress.py 6 5 1 &
+#jsrun -n1 -c7 -g1 -a1 -bpacked:7 python3 /ccs/home/jreynolds/21summer/veress/classification/code/v20210811/c_NCV_veress.py 6 6 1 &
+jsrun -n1 -c7 -g1 -a1 -bpacked:7 python3 /ccs/home/jreynolds/21summer/veress/classification/code/v20210811/c_NCV_veress.py 6 7 1 &
+jsrun -n1 -c7 -g1 -a1 -bpacked:7 python3 /ccs/home/jreynolds/21summer/veress/classification/code/v20210811/c_NCV_veress.py 6 8 1 &
+
+# S6, Xception
+jsrun -n1 -c7 -g1 -a1 -bpacked:7 python3 /ccs/home/jreynolds/21summer/veress/classification/code/v20210811/c_NCV_veress.py 6 1 2 &
+jsrun -n1 -c7 -g1 -a1 -bpacked:7 python3 /ccs/home/jreynolds/21summer/veress/classification/code/v20210811/c_NCV_veress.py 6 2 2 &
+jsrun -n1 -c7 -g1 -a1 -bpacked:7 python3 /ccs/home/jreynolds/21summer/veress/classification/code/v20210811/c_NCV_veress.py 6 3 2 &
+jsrun -n1 -c7 -g1 -a1 -bpacked:7 python3 /ccs/home/jreynolds/21summer/veress/classification/code/v20210811/c_NCV_veress.py 6 4 2 &
+jsrun -n1 -c7 -g1 -a1 -bpacked:7 python3 /ccs/home/jreynolds/21summer/veress/classification/code/v20210811/c_NCV_veress.py 6 5 2 &
+#jsrun -n1 -c7 -g1 -a1 -bpacked:7 python3 /ccs/home/jreynolds/21summer/veress/classification/code/v20210811/c_NCV_veress.py 6 6 2 &
+jsrun -n1 -c7 -g1 -a1 -bpacked:7 python3 /ccs/home/jreynolds/21summer/veress/classification/code/v20210811/c_NCV_veress.py 6 7 2 &
+jsrun -n1 -c7 -g1 -a1 -bpacked:7 python3 /ccs/home/jreynolds/21summer/veress/classification/code/v20210811/c_NCV_veress.py 6 8 2 &
+
+# Testing-fold 7
+# S7, ResNet50 
+jsrun -n1 -c7 -g1 -a1 -bpacked:7 python3 /ccs/home/jreynolds/21summer/veress/classification/code/v20210811/c_NCV_veress.py 7 1 0 &
+jsrun -n1 -c7 -g1 -a1 -bpacked:7 python3 /ccs/home/jreynolds/21summer/veress/classification/code/v20210811/c_NCV_veress.py 7 2 0 &
+jsrun -n1 -c7 -g1 -a1 -bpacked:7 python3 /ccs/home/jreynolds/21summer/veress/classification/code/v20210811/c_NCV_veress.py 7 3 0 &
+jsrun -n1 -c7 -g1 -a1 -bpacked:7 python3 /ccs/home/jreynolds/21summer/veress/classification/code/v20210811/c_NCV_veress.py 7 4 0 &
+jsrun -n1 -c7 -g1 -a1 -bpacked:7 python3 /ccs/home/jreynolds/21summer/veress/classification/code/v20210811/c_NCV_veress.py 7 5 0 &
+jsrun -n1 -c7 -g1 -a1 -bpacked:7 python3 /ccs/home/jreynolds/21summer/veress/classification/code/v20210811/c_NCV_veress.py 7 6 0 &
+#jsrun -n1 -c7 -g1 -a1 -bpacked:7 python3 /ccs/home/jreynolds/21summer/veress/classification/code/v20210811/c_NCV_veress.py 7 7 0 &
+jsrun -n1 -c7 -g1 -a1 -bpacked:7 python3 /ccs/home/jreynolds/21summer/veress/classification/code/v20210811/c_NCV_veress.py 7 8 0 &
+
+# S7, InceptionV3
+jsrun -n1 -c7 -g1 -a1 -bpacked:7 python3 /ccs/home/jreynolds/21summer/veress/classification/code/v20210811/c_NCV_veress.py 7 1 1 &
+jsrun -n1 -c7 -g1 -a1 -bpacked:7 python3 /ccs/home/jreynolds/21summer/veress/classification/code/v20210811/c_NCV_veress.py 7 2 1 &
+jsrun -n1 -c7 -g1 -a1 -bpacked:7 python3 /ccs/home/jreynolds/21summer/veress/classification/code/v20210811/c_NCV_veress.py 7 3 1 &
+jsrun -n1 -c7 -g1 -a1 -bpacked:7 python3 /ccs/home/jreynolds/21summer/veress/classification/code/v20210811/c_NCV_veress.py 7 4 1 &
+jsrun -n1 -c7 -g1 -a1 -bpacked:7 python3 /ccs/home/jreynolds/21summer/veress/classification/code/v20210811/c_NCV_veress.py 7 5 1 &
+jsrun -n1 -c7 -g1 -a1 -bpacked:7 python3 /ccs/home/jreynolds/21summer/veress/classification/code/v20210811/c_NCV_veress.py 7 6 1 &
+#jsrun -n1 -c7 -g1 -a1 -bpacked:7 python3 /ccs/home/jreynolds/21summer/veress/classification/code/v20210811/c_NCV_veress.py 7 7 1 &
+jsrun -n1 -c7 -g1 -a1 -bpacked:7 python3 /ccs/home/jreynolds/21summer/veress/classification/code/v20210811/c_NCV_veress.py 7 8 1 &
+
+# S7, Xception
+jsrun -n1 -c7 -g1 -a1 -bpacked:7 python3 /ccs/home/jreynolds/21summer/veress/classification/code/v20210811/c_NCV_veress.py 7 1 2 &
+jsrun -n1 -c7 -g1 -a1 -bpacked:7 python3 /ccs/home/jreynolds/21summer/veress/classification/code/v20210811/c_NCV_veress.py 7 2 2 &
+jsrun -n1 -c7 -g1 -a1 -bpacked:7 python3 /ccs/home/jreynolds/21summer/veress/classification/code/v20210811/c_NCV_veress.py 7 3 2 &
+jsrun -n1 -c7 -g1 -a1 -bpacked:7 python3 /ccs/home/jreynolds/21summer/veress/classification/code/v20210811/c_NCV_veress.py 7 4 2 &
+jsrun -n1 -c7 -g1 -a1 -bpacked:7 python3 /ccs/home/jreynolds/21summer/veress/classification/code/v20210811/c_NCV_veress.py 7 5 2 &
+jsrun -n1 -c7 -g1 -a1 -bpacked:7 python3 /ccs/home/jreynolds/21summer/veress/classification/code/v20210811/c_NCV_veress.py 7 6 2 &
+#jsrun -n1 -c7 -g1 -a1 -bpacked:7 python3 /ccs/home/jreynolds/21summer/veress/classification/code/v20210811/c_NCV_veress.py 7 7 2 &
+jsrun -n1 -c7 -g1 -a1 -bpacked:7 python3 /ccs/home/jreynolds/21summer/veress/classification/code/v20210811/c_NCV_veress.py 7 8 2 &
+
+# Testing-fold 8
+# S8, ResNet50
+jsrun -n1 -c7 -g1 -a1 -bpacked:7 python3 /ccs/home/jreynolds/21summer/veress/classification/code/v20210811/c_NCV_veress.py 8 1 0 &
+jsrun -n1 -c7 -g1 -a1 -bpacked:7 python3 /ccs/home/jreynolds/21summer/veress/classification/code/v20210811/c_NCV_veress.py 8 2 0 &
+jsrun -n1 -c7 -g1 -a1 -bpacked:7 python3 /ccs/home/jreynolds/21summer/veress/classification/code/v20210811/c_NCV_veress.py 8 3 0 &
+jsrun -n1 -c7 -g1 -a1 -bpacked:7 python3 /ccs/home/jreynolds/21summer/veress/classification/code/v20210811/c_NCV_veress.py 8 4 0 &
+jsrun -n1 -c7 -g1 -a1 -bpacked:7 python3 /ccs/home/jreynolds/21summer/veress/classification/code/v20210811/c_NCV_veress.py 8 5 0 &
+jsrun -n1 -c7 -g1 -a1 -bpacked:7 python3 /ccs/home/jreynolds/21summer/veress/classification/code/v20210811/c_NCV_veress.py 8 6 0 &
+jsrun -n1 -c7 -g1 -a1 -bpacked:7 python3 /ccs/home/jreynolds/21summer/veress/classification/code/v20210811/c_NCV_veress.py 8 7 0 &
+#jsrun -n1 -c7 -g1 -a1 -bpacked:7 python3 /ccs/home/jreynolds/21summer/veress/classification/code/v20210811/c_NCV_veress.py 8 8 0 &
+
+# S8, InceptionV3
+jsrun -n1 -c7 -g1 -a1 -bpacked:7 python3 /ccs/home/jreynolds/21summer/veress/classification/code/v20210811/c_NCV_veress.py 8 1 1 &
+jsrun -n1 -c7 -g1 -a1 -bpacked:7 python3 /ccs/home/jreynolds/21summer/veress/classification/code/v20210811/c_NCV_veress.py 8 2 1 &
+jsrun -n1 -c7 -g1 -a1 -bpacked:7 python3 /ccs/home/jreynolds/21summer/veress/classification/code/v20210811/c_NCV_veress.py 8 3 1 &
+jsrun -n1 -c7 -g1 -a1 -bpacked:7 python3 /ccs/home/jreynolds/21summer/veress/classification/code/v20210811/c_NCV_veress.py 8 4 1 &
+jsrun -n1 -c7 -g1 -a1 -bpacked:7 python3 /ccs/home/jreynolds/21summer/veress/classification/code/v20210811/c_NCV_veress.py 8 5 1 &
+jsrun -n1 -c7 -g1 -a1 -bpacked:7 python3 /ccs/home/jreynolds/21summer/veress/classification/code/v20210811/c_NCV_veress.py 8 6 1 &
+jsrun -n1 -c7 -g1 -a1 -bpacked:7 python3 /ccs/home/jreynolds/21summer/veress/classification/code/v20210811/c_NCV_veress.py 8 7 1 &
+#jsrun -n1 -c7 -g1 -a1 -bpacked:7 python3 /ccs/home/jreynolds/21summer/veress/classification/code/v20210811/c_NCV_veress.py 8 8 1 &
+
+# S7, Xception
+jsrun -n1 -c7 -g1 -a1 -bpacked:7 python3 /ccs/home/jreynolds/21summer/veress/classification/code/v20210811/c_NCV_veress.py 8 1 2 &
+jsrun -n1 -c7 -g1 -a1 -bpacked:7 python3 /ccs/home/jreynolds/21summer/veress/classification/code/v20210811/c_NCV_veress.py 8 2 2 &
+jsrun -n1 -c7 -g1 -a1 -bpacked:7 python3 /ccs/home/jreynolds/21summer/veress/classification/code/v20210811/c_NCV_veress.py 8 3 2 &
+jsrun -n1 -c7 -g1 -a1 -bpacked:7 python3 /ccs/home/jreynolds/21summer/veress/classification/code/v20210811/c_NCV_veress.py 8 4 2 &
+jsrun -n1 -c7 -g1 -a1 -bpacked:7 python3 /ccs/home/jreynolds/21summer/veress/classification/code/v20210811/c_NCV_veress.py 8 5 2 &
+jsrun -n1 -c7 -g1 -a1 -bpacked:7 python3 /ccs/home/jreynolds/21summer/veress/classification/code/v20210811/c_NCV_veress.py 8 6 2 &
+jsrun -n1 -c7 -g1 -a1 -bpacked:7 python3 /ccs/home/jreynolds/21summer/veress/classification/code/v20210811/c_NCV_veress.py 8 7 2 &
+#jsrun -n1 -c7 -g1 -a1 -bpacked:7 python3 /ccs/home/jreynolds/21summer/veress/classification/code/v20210811/c_NCV_veress.py 8 8 2 &
+
+wait
